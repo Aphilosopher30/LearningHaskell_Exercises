@@ -43,7 +43,8 @@ last xs = head (reverse xs )
 -- combination of other available Prelude functions
 -----------------------------------------------------------------------------------------------------------
 init :: [a] -> [a]
-init xs = error "TODO implement init"
+init xs = take (length xs-1) xs 
+
 
 -- Exercise C
 -----------------------------------------------------------------------------------------------------------
