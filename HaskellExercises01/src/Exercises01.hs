@@ -91,13 +91,14 @@ inners xs = drop 1 (init xs)
 -- Implement a function that computes the Euclidean distance in 2 dimensions of two points p and q
 -- See https://en.wikipedia.org/wiki/Euclidean_distance for details
 distance :: (Float,Float) -> (Float,Float) -> Float
-distance (p1,p2) (q1,q2) = error "TODO implement distance"
+distance (p1,p2) (q1,q2) = sqrt((p1 - q1)**2 + (p2 - q2)**2 )
 
--- Exercise F
+
+-- Exercise G
 -----------------------------------------------------------------------------------------------------------
 -- Write a function nthRoot that computes the nth root (i.e. n==2 square root, n==3 cube root, etc)
 -- using the fact that the nth root of a number is the same as performing a power to 1/n
 -- NOTE: you have to use the ** operator instead of ^ when using floating point numbers for powers
 --       you'll also need fromIntegral to convert from integers to a floating point
 nthRoot :: Float -> Int -> Float
-nthRoot x n = error "TODO implement nthRoot"
+nthRoot x n =  (x)**(1 / (fromIntegral n))
