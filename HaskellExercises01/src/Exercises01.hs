@@ -66,10 +66,11 @@ xs !! n = last (take n xs)
 -- HINT: use the `div` function instead of / to do integer division when dividing the length of the list
 --       by 2, then take or drop those amount of elements from the list
 firstHalf :: [a] -> [a]
-firstHalf xs = error "TODO implement firstHalf"
+firstHalf xs = fst (splitAt (length xs  `div` 2) xs)
+
 
 lastHalf :: [a] -> [a]
-lastHalf xs = error "TODO implement lastHalf"
+lastHalf xs = snd (splitAt (length xs  `div` 2) xs)
 
 -- Exercise E
 -----------------------------------------------------------------------------------------------------------
