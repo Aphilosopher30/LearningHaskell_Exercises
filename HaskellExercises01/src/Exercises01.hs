@@ -83,7 +83,8 @@ lastHalf xs = snd (splitAt (length xs  `div` 2) xs)
 --   inners [1,2,3,4] == [2,3]
 inners :: [a] -> [a]
 inners [] = []
-inners xs = error "TODO implement inners"
+inners xs = drop 1 (init xs)
+
 
 -- Exercise F
 -----------------------------------------------------------------------------------------------------------
