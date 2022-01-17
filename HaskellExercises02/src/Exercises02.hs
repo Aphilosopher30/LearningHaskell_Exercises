@@ -47,7 +47,9 @@ x || y = if x == True
 -- Implement Logical conjunction (AND) using pattern matching
 -----------------------------------------------------------------------------------------------------------
 (&&) :: Bool -> Bool -> Bool
-x && y = error "TODO implement &&"
+x && y = if not (not x || not y)
+          then True
+          else False
 
 -- Exercise C
 -----------------------------------------------------------------------------------------------------------
