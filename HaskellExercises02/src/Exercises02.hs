@@ -62,8 +62,14 @@ x ==> y = error "TODO implement ==>"
 -----------------------------------------------------------------------------------------------------------
 -- Implement the function abs that returns the absolute value of a number
 -----------------------------------------------------------------------------------------------------------
+
+--multipyByNegOne :: num -> num
+--multipyByNegOne x = x*(-1)
+
 abs :: (Num a,Ord a) => a -> a
-abs x = error "TODO implement abs"
+abs x = if x < 0
+        then  x*(-1)
+        else x
 
 -- Exercise E
 -----------------------------------------------------------------------------------------------------------
