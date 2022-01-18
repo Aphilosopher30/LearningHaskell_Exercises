@@ -87,7 +87,12 @@ x =. y = error "TODO implement =."
 -- Implement a function stack that takes the first element of a list and moves it to the back
 -----------------------------------------------------------------------------------------------------------
 stack :: [a] -> [a]
-stack xs = error "TODO implement stack"
+stack [] = []
+stack xs = (drop 1 xs) ++ (head xs ):[]
+
+
+
+
 
 -- Exercise G
 -----------------------------------------------------------------------------------------------------------
