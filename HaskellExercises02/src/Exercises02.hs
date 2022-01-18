@@ -80,7 +80,7 @@ abs x = if x < 0
 --        HOWEVER, you'll need to adjust the tolerance to suit different contexts
 -----------------------------------------------------------------------------------------------------------
 (=.) :: (Floating a,Ord a) => a -> a -> Bool
-x =. y = if (((x - y) < (0.0  + 0.0001) )&& ((x - y) > (0.0 - 0.0001)))
+x =. y = if ((abs(x - y)) < (0.0  + 0.0001))
           then True
           else False
 
