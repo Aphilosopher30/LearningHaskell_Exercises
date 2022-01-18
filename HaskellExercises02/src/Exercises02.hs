@@ -101,4 +101,5 @@ stack xs = (drop 1 xs) ++ (head xs ):[]
 -- NOTE use the map function combined with a lambda expression to do the division
 -----------------------------------------------------------------------------------------------------------
 halves :: Integral a => [a] -> [a]
-halves xs = error "TODO implement halves"
+halves [] = []
+halves xs = map  (`div` 2)   xs 
