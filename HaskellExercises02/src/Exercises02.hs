@@ -80,7 +80,11 @@ abs x = if x < 0
 --        HOWEVER, you'll need to adjust the tolerance to suit different contexts
 -----------------------------------------------------------------------------------------------------------
 (=.) :: (Floating a,Ord a) => a -> a -> Bool
-x =. y = error "TODO implement =."
+x =. y = if (((x - y) < (0.0  + 0.0001) )&& ((x - y) > (0.0 - 0.0001)))
+          then True
+          else False
+
+
 
 -- Exercise F
 -----------------------------------------------------------------------------------------------------------
@@ -89,9 +93,6 @@ x =. y = error "TODO implement =."
 stack :: [a] -> [a]
 stack [] = []
 stack xs = (drop 1 xs) ++ (head xs ):[]
-
-
-
 
 
 -- Exercise G
