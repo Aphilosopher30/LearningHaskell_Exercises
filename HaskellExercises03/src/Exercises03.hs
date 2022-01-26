@@ -52,7 +52,9 @@ data Tree a = Node a (Tree a) (Tree a)
    deriving (Show,Eq)
 
 exTree :: Tree Char
-exTree =  
+exTree = Node 'd'
+            (Node 'b' (Leaf 'a') (Leaf 'c'))
+            (Node 'f' (Leaf 'e') (Leaf 'g'))
 
 -- Exercise C
 -----------------------------------------------------------------------------------------------------------
